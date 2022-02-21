@@ -9,6 +9,7 @@ function setup () {
 
 }
   function draw () {
+    background(255,0,0,2)
     i+=0.25
     let offsetX = width/2
     let offsetY = height/2
