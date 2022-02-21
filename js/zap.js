@@ -13,17 +13,18 @@ function setup () {
   for (var i = 0; i < total; i++) {
     xs.push(random(0,innerWidth))
     ys.push(innerHeight/2)
-    dxs.push(random(-10,10))
-    dys.push(random(-10,10))
+    dxs.push(random(-5,5))
+    dys.push(random(-5,5))
   }
 }
 
 
 function drawOverlaps (x , y) {
   let r = random (100,255)
-  let g = random (0,255)
   let b = random (100,255)
   stroke(r,255,b)
+  let wt = random(0.1, 1.5)
+  strokeWeight(wt)
   for (var i = 0; i < total; i++) {
     let distance = dist(x, y, xs[i], ys[i])
     if (distance < d && distance !== 0) {
@@ -45,7 +46,8 @@ function draw () {
     if (ys[i] > height || ys[i] < 0) dys[i] = -dys[i]
     // ellipse(xs[i],ys[i],d)
     let distance2 = dist(mouseX, mouseY, xs[i], ys[i]) // sets radius of mouse click
-    if (mouseIsPressed && distance2 < 150) { // pattern only shows up if clicked
+    let range = innerHeight/2
+    if (mouseIsPressed && distance2 < range ) { // pattern only shows up if clicked
       drawOverlaps(xs[i], ys[i])
     }
   }
