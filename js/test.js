@@ -1,10 +1,4 @@
 // generative hello world
-
-let x = innerWidth/2
-let y = innerHeight/2
-let dy = 5
-let dx = 5
-
 function setup () {
   createCanvas(innerWidth, innerHeight)
   background(100,10,10)
@@ -19,14 +13,6 @@ function draw () {
   let d = width / div
   let r = d/2
 
-  x += dx
-  y += dy
-
-  if (y > height - r || y < 0 + r) {dy= -dy}
-
-
-  if (x > width - r || x < 0 + r) {dx= -dx}
-
   for (let i = 0; i < 1; i++) {
     let x = random(0, width)
     let y = random(0, height)
@@ -35,4 +21,3 @@ function draw () {
     ellipse(x, y, d)
   }
 }
-square()
