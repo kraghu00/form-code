@@ -1,5 +1,4 @@
-
-let d = 100
+let d = innerHeight/8
 let total = 200
 let xs = []
 let ys = []
