@@ -11,7 +11,7 @@ function setup () {
 
   for (var i = 0; i < total; i++) {
     xs.push(random(0,innerWidth))
-    ys.push(innerHeight/2)
+    ys.push(random(0,innerHeight))
     dxs.push(random(-5,5))
     dys.push(random(-5,5))
   }
